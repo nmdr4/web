@@ -69,6 +69,7 @@ function createLogWindow(log) {
         <p><strong>Creador:</strong> ${log.Creator}</p>
         <p><strong>Link:</strong> <a href="${log.Link}" target="_blank">${log.Link}</a></p>
         <p><strong>JobId:</strong> ${log.JobId}</p>
+        <p><strong>Join JobID:</strong> <a href="${log.JoinLink}" target="_blank">${log.JoinLink}</a></p>
         <p><strong>Jugadores:</strong> ${log.Players}</p>
         <p><strong>Studio:</strong> ${log.IsStudio ? "Sí" : "No"}</p>
         <button class="delete-btn">Borrar Log</button>
@@ -84,14 +85,3 @@ function createLogWindow(log) {
 
     logsGrid.appendChild(card);
 }
-
-// Log de prueba para visualizar la ventana
-const testLog = {
-    Name: "Test Game",
-    Creator: "Test Creator",
-    JobId: "test-123",
-    Players: 5,
-    IsStudio: false,
-    Link: "https://www.roblox.com/games/123456"
-};
-createLogWindow(testLog);
