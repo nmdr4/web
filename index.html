@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Epihx Logs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="login-container">
+    <h1>Login</h1>
+    <form id="login-form" autocomplete="on">
+        <input type="text" id="username" placeholder="Username" autocomplete="username" required>
+        <input type="password" id="password" placeholder="Password" autocomplete="current-password" required>
+        <label>
+            <input type="checkbox" id="remember-me" checked> Remember Me
+        </label>
+        <button type="submit">Login</button>
+        <p id="error-msg" style="color:red;"></p>
+    </form>
+</div>
+
+<div id="logs-container" style="display:none;">
+    <header>
+        <h1>Epihx Logs</h1>
+        <button id="logout-btn">Log Out</button>
+    </header>
+    <main id="logs-grid"></main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
