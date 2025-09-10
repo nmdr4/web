@@ -48,8 +48,10 @@ async function fetchLogs() {
             headers: { "Authorization": `Bearer ${TOKEN}` }
         });
         let data = await res.json();
-        if (!Array.isArray(data) || data.length === 0) {
-            console.warn("No hay logs en la API, creando log de prueba...");
+
+        // Si no hay logs o hay error, crear log de prueba
+        if (!Array.isArray(data) || data.length === 0 || data.error) {
+            console.warn("No hay logs o error en API, creando log de prueba...");
             data = [{
                 Name: "Test Game",
                 Creator: "Test Creator",
