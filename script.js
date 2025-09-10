@@ -84,3 +84,14 @@ function createLogWindow(log) {
 
     logsGrid.appendChild(card);
 }
+
+// Log de prueba para visualizar la ventana
+const testLog = {
+    Name: "Test Game",
+    Creator: "Test Creator",
+    JobId: "test-123",
+    Players: 5,
+    IsStudio: false,
+    Link: "https://www.roblox.com/games/123456"
+};
+createLogWindow(testLog);
