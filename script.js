@@ -47,7 +47,19 @@ async function fetchLogs() {
         const res = await fetch(API_URL, {
             headers: { "Authorization": `Bearer ${TOKEN}` }
         });
-        const data = await res.json();
+        let data = await res.json();
+        if (!Array.isArray(data) || data.length === 0) {
+            console.warn("No hay logs en la API, creando log de prueba...");
+            data = [{
+                Name: "Test Game",
+                Creator: "Test Creator",
+                JobId: "test-123",
+                Players: 5,
+                IsStudio: false,
+                Link: "https://www.roblox.com/games/123456",
+                JoinLink: "https://www.roblox.com/games/123456/join?placeId=123456&jobId=test-123"
+            }];
+        }
 
         data.forEach(log => {
             if (!document.getElementById(log.JobId)) {
