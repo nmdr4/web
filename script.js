@@ -4,13 +4,12 @@ async function iniciar() {
   const mensaje = document.getElementById("mensaje")
 
   mensaje.style.display = "none"
-
+  audio.volume = 1
+  audio.loop = true
+  audio.play()
   if (document.documentElement.requestFullscreen) {
     document.documentElement.requestFullscreen()
   }
-
-  audio.volume = 1
-  audio.play()
 
   let visible = false
 
