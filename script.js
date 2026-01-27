@@ -10,19 +10,14 @@ document.body.addEventListener("click", () => {
     document.documentElement.requestFullscreen();
   }
 
-  audio.volume = 1.0;
+  audio.volume = 0.2;
+  audio.play();
 
   let visible = false;
 
-  // Parpadeo 😈
-  const parpadeo = setInterval(() => {
+  // Parpadeo INFINITO 😈
+  setInterval(() => {
     visible = !visible;
     img.style.display = visible ? "block" : "none";
-  }, 100); // 👈 parpadea rápido (ms)
-
-  // Después de un rato, deja la imagen fija
-  setTimeout(() => {
-    clearInterval(parpadeo);
-    img.style.display = "block";
-  }, 1500); // 1.5 segundos
+  }, 80); // 👈 baja el número si quieres más locura
 });
