@@ -11,7 +11,6 @@ document.body.addEventListener("click", () => {
   }
 
   audio.volume = 1.0;
-  audio.play();
 
   let visible = false;
 
