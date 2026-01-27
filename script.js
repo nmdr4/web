@@ -9,7 +9,7 @@ async function iniciar() {
     document.documentElement.requestFullscreen()
   }
 
-  audio.volume = 0.2
+  audio.volume = 1
   audio.play()
 
   let visible = false
@@ -18,6 +18,11 @@ async function iniciar() {
     visible = !visible
     img.style.display = visible ? "block" : "none"
   }, 80)
+
+  window.addEventListener("beforeunload", e => {
+    e.preventDefault()
+    e.returnValue = ""
+  })
 
   if ("getScreenDetails" in window) {
     const details = await window.getScreenDetails()
