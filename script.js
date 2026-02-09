@@ -1,59 +1,3 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<title>continuar</title>
-
-<style>
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-#screamer {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-}
-
-#mensaje {
-  color: white;
-  font-size: 2rem;
-  text-align: center;
-  margin-top: 40vh;
-  font-family: arial, sans-serif;
-}
-
-#creditos {
-  position: fixed;
-  bottom: 6px;
-  left: 6px;
-  font-size: 9px;
-  color: white;
-  font-family: arial, sans-serif;
-  opacity: 0.8;
-}
-</style>
-</head>
-
-<body>
-
-<div id="mensaje"></div>
-<div id="creditos">made by nmd4</div>
-
-<img id="screamer" src="screamer.jpg">
-<audio id="audio" src="screamer.mp3"></audio>
-
-<script>
 const traducciones = {
   es: "haz click para continuar",
   en: "click to continue",
@@ -111,7 +55,3 @@ async function iniciar() {
 }
 
 document.body.addEventListener("click", iniciar, { once: true })
-</script>
-
-</body>
-</html>
